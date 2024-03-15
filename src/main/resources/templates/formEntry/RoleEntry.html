@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{index :: dynamic(~{::main})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Role Entry</title>
+</head>
+<body>
+<div th:fragment="main">
+    <form action="FormClassRole.js" method="post">
+    <link rel="stylesheet" th:href="@{/FormClass/css/FormClassF8.css}">
+    <script src="/FormClass/js/FormClassRole.js"></script>
+    <script>
+        const serviceFormClass = new FormClassRole();
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            serviceFormClass.loadInitForRole();
+        });
+    </script>
+    <div class="container px-3 text-center">
+        <div class="row gx-3">
+            <div class="col-7">
+                <div class="p-3" id="titleLeft">List Roles</div>
+                <div class="input-group">
+                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                    <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>
+                </div>
+                <table class="table table-hover" id="tableListRole">
+                    <thead>
+                    <tr>
+                        <th scope="col">Role ID</th>
+                        <th scope="col">Role Name</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbodyTableListRoleContent"></tbody>
+                </table>
+            </div>
+            <div class="col-5" id="formDetail">
+                <div class="p-3" id="titleRight">Form Detail</div>
+                <div class="mb-3 row">
+                    <label for="roleId" class="col-sm-4 col-form-label">#Role Id</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="roleId" placeholder="">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="roleName" class="col-sm-4 col-form-label">Role Name</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="roleName" placeholder="">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="roleName" class="col-sm-4 col-form-label">Description</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="description" placeholder="">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="exampleFormControlTextarea1" class="col-sm-4 col-form-label">Ghi Chú</label>
+                    <div class="col-sm-8">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="container overflow-hidden text-center">
+                    <div class="row gx-5">
+                            <div class="col">
+                                <div class="p-2">
+                                    <button type="button" class="btn btn-success"
+                                            th:attr = "onclick='serviceFormClass.deleteButon_Click()'">Delete
+                                    </button>
+                                </div>
+                            </div>
+                        <div class="col">
+                            <div class="p-2">
+                                <button type="button" class="btn btn-success"
+                                        th:attr="onclick='serviceFormClass.btnClearFormRole_click()'">Clear
+                                </button>
+                            </div>
+                        </div>
+                            <div class="col">
+                                <div class="p-2">
+                                    <button type="button" class="btn btn-primary"
+                                         th:attr = "onclick='serviceFormClass.saveRoleEntry()'">Save
+                                    </button>
+                                    </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+</div>
+</body>
+</html>
