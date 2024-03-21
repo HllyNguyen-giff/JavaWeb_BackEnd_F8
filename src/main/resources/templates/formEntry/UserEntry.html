@@ -33,10 +33,7 @@
 <!--                    <input type="text" id="input" name="data">-->
 <!--                    <button type="submit">Gửi</button>-->
                 </form>
-<!--                <div class="input-group">-->
-<!--                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />-->
-<!--                    <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>-->
-<!--                </div>-->
+
                 <table class="table table-hover" id="tableListUser">
                     <thead>
                     <tr>
@@ -61,33 +58,38 @@
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="firstName" class="col-sm-4 col-form-label">User Name</label>
+                    <label for="userName" class="col-sm-4 col-form-label">User Name</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="firstName" placeholder="">
+                        <input type="text" class="form-control" id="userName" placeholder="">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="lastName" class="col-sm-4 col-form-label">AGE</label>
+                    <label for="age" class="col-sm-4 col-form-label">Age</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="lastName" placeholder="">
+                        <input type="text" class="form-control" id="age" placeholder="">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="major" class="col-sm-4 col-form-label">Gmail</label>
+                    <label for="gmail" class="col-sm-4 col-form-label">Gmail</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="major" placeholder="">
+                        <input type="text" class="form-control" id="gmail" placeholder="">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="exampleFormControlTextarea1" class="col-sm-4 col-form-label">RoleID</label>
+                    <label for="roleId" class="col-sm-4 col-form-label">RoleID</label>
                     <div class="col-sm-8">
-                        <textarea class="form-control" id="form-control" rows="3"></textarea>
+                        <input type="text" class="form-control" id="roleId" placeholder="">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="exampleFormControlTextarea1" class="col-sm-4 col-form-label">Description</label>
+                    <label class="col-sm-4 col-form-label">Role Name</label>
+                    <div class="col-sm-8" id="componentSelectRole">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="description" class="col-sm-4 col-form-label">Description</label>
                     <div class="col-sm-8">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <input type="text" class="form-control" id="description" placeholder="">
                     </div>
                 </div>
                 <div class="container overflow-hidden text-center">
@@ -110,7 +112,7 @@
                         <div class="col">
                             <div class="p-3">
                                 <button type="button" class="btn btn-primary"
-                                        th:attr="onclick='serviceFormClass.saveUserEntry'">Create
+                                        th:attr="onclick='serviceFormClass.deleteButon_Click'">Delete
 
                                 </button>
                             </div>
