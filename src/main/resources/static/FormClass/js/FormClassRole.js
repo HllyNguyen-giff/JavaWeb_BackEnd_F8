@@ -63,28 +63,28 @@ class FormClassRole {
 
 
     };
-    btnSaveRole_click = () => {
-        var roleId = document.getElementById('roleId').value;
-        var roleName = document.getElementById('roleName').value;
-        var roleIn4Form = {
-            roleId: roleId,
-            roleName: roleName,
-            description: document.getElementById('description').value,
-
-        }
-
-        console.log(roleIn4Form);
-        if (!this.validateDataFormRole(roleIn4Form)) {
-            swal("Cảnh Báo!", "Vui Lòng Nhập Đủ Thông Tin", "warning");
-        } else {
-            swal("Đã Nhập RoleName! " + "\n Đã Nhập Thành Công \n"
-                , " Role Name-------- :" + roleIn4Form.roleName
-                + " \nRole ID-------- :" + roleIn4Form.roleId + " \nDescription-------- :" + roleIn4Form.description);
-        }
-        // swal("Đã Nhập RoleName! "+ "\n Đã Nhập Thành Công \n"
-        //     , " Role Name-------- :"+  roleIn4Form.roleName
-        //     +  " \nRole ID-------- :" + roleIn4Form.roleId+  " \nDescription-------- :" + roleIn4Form.description);
-    };
+    // btnSaveRole_click = () => {
+    //     var roleId = document.getElementById('roleId').value;
+    //     var roleName = document.getElementById('roleName').value;
+    //     var roleIn4Form = {
+    //         roleId: roleId,
+    //         roleName: roleName,
+    //         description: document.getElementById('description').value,
+    //
+    //     }
+    //
+    //     console.log(roleIn4Form);
+    //     if (!this.validateDataFormRole(roleIn4Form)) {
+    //         swal("Cảnh Báo!", "Vui Lòng Nhập Đủ Thông Tin", "warning");
+    //     } else {
+    //         swal("Đã Nhập RoleName! " + "\n Đã Nhập Thành Công \n"
+    //             , " Role Name-------- :" + roleIn4Form.roleName
+    //             + " \nRole ID-------- :" + roleIn4Form.roleId + " \nDescription-------- :" + roleIn4Form.description);
+    //     }
+    //     // swal("Đã Nhập RoleName! "+ "\n Đã Nhập Thành Công \n"
+    //     //     , " Role Name-------- :"+  roleIn4Form.roleName
+    //     //     +  " \nRole ID-------- :" + roleIn4Form.roleId+  " \nDescription-------- :" + roleIn4Form.description);
+    // };
     validateDataFormRole = (RoleIn4) => {
         // nếu userIn4 != null || != undefined => true
         // ! => nếu userIn4 == null || == undefined => true
